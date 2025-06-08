@@ -70,7 +70,7 @@ a {
 
 #content #profile_pic {
 	flex: 1;
-	max-width: 20ch;
+	max-width: 300px;
 }
 
 #content .text {
