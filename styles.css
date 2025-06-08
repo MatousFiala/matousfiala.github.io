@@ -22,6 +22,14 @@ p {
 	text-align: justify;
 }
 
+a {
+	color: var(--text_col);
+}
+
+#content p:first-of-type {
+	margin-top: 0;
+}
+
 #header {
 	width: 100%;
 	margin: 5% 0;
@@ -52,4 +60,24 @@ p {
 	font-weight: bold;
 	text-decoration: none;
 	padding: 0.25ex 4ch;
+}
+
+#content {
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+}
+
+#content #profile_pic {
+	flex: 1;
+	max-width: 20ch;
+}
+
+#content .text {
+	flex: 2;
+}
+
+#profile_pic img {
+	width: 100%;
+	height: auto;
 }
