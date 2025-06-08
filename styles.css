@@ -1,0 +1,55 @@
+body {
+	--bg: #f2f2f2;
+	--text_col: #444;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 12;
+	line-height: 1.8;
+	display: block;
+
+
+	background-color: var(--bg);
+	color: var(--text_col);
+}
+
+#content {
+	max-width: 80ch;
+	padding: 1ch 10ch;
+	margin: 0 auto;
+}
+
+p {
+	text-align: justify;
+}
+
+#header {
+	width: 100%;
+	margin: 5% 0;
+	text-align: center;
+}
+
+#nav {
+	border-bottom: 1px solid var(--text_col);
+	border-top: 1px solid var(--text_col);
+}
+
+#nav ul {
+	width: 80ch;
+	margin: 0.5ex auto;
+	padding: 0;
+	justify-content: space-between;
+	display: flex;
+}
+
+#nav ul li {
+
+	display: inline;
+
+}
+
+#nav ul li a {
+	color: var(--text_col);
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0.25ex 4ch;
+}
