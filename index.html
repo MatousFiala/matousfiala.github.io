@@ -1,38 +1,96 @@
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
+
+<head>
 	<meta charset='UTF-8'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel='stylesheet' href='styles.css'>
 
 	<title>Matouš Fiala</title>
-    </head>
-    <body>
-	<div id='header'>
-	    <h1> Matouš Fiala </h1>
-	    <!--
-	    <div id='nav'>
-		<ul>
-		    <li><a href=''>About</a></li>
-		    <li><a href=''>Blog</a></li>
-		</ul>
-	    </div>
--->
-	</div>
+</head>
 
-	<div id='content'>
-	    <div class='text'>
-		<p> I am an analyst based in Prague, Czech Republic. I am currently working as an intern at <a href='www.ceskepriority.cz'>České priority</a>, a non-governmental organisation focused on improving governance. There, I am responsible for analysing data, mainly related to over-indebtedness. I have a bachelor's degree in Economics from IES, Charles University, where I am working through a master's in Public sector economics with a minor in Artificial intelligence. Besides this, I sit on the Budget committee of Prague 18.</p>
+<body>
+	<header>
+		<h1> Matouš Fiala </h1>
 
-		<p>You can read my CV <a href='documents/cv.pdf'>here</a> (pdf).</p>
+	</header>
 
-		<p>You can contact me at <i>matousfiala [at] gmail [dot] com</i></p>
+	<section id='content'>
+		<div id="lang-choice">
+			<button class="active" language="EN">EN</button>
+			|
+			<button language="CZ">CZ</button>
+		</div>
+		<div id="flex">
+			<div class='text'>
+				<div class="EN">
+					<p> <b>I am an analyst based in Prague, Czech Republic</b>. I am currently working as an intern at
+						<a href='https://www.ceskepriority.cz'>České priority</a>, a non-governmental organisation
+						focused
+						on
+						improving
+						governance. There, I am responsible for analysing data, mainly related to over-indebtedness. I
+						have
+						a
+						bachelor's degree in Economics from <a href="https://ies.fsv.cuni.cz/en">IES, Charles
+							University</a>,
+						where I am working through a master's in
+						Public sector economics with a <a href="https://ies.fsv.cuni.cz/">Minor in Artificial
+							intelligence</a>.
+						Besides this, I sit on the Budget
+						committee of Prague 18.
+					</p>
 
-	    </div>
-	    <div id='profile_pic'><img src='images/profile_picture.jpg' /></div>
-	</div>
+					<p>You can read my CV <a href='documents/cv.pdf'>here</a> (pdf), or browse my <a
+							href="https://github.com/MatousFiala/">GitHub</a>.</p>
+
+					<p style="margin-bottom: 0;">You can contact me at <a
+							href="mailto:matousfiala@gmail.com">matousfiala@gmail.com</a>, or through my <a
+							href="https://www.linkedin.com/in/matou%C5%A1-fiala-a154a21b0/">LinkedIn</a>.</p>
+
+
+
+				</div>
+
+				<div class='CZ'>
+					<p> <b> Jsem analytik z Prahy </b>. Pracuji jako stážista v <a
+							href="https://www.ceskepriority.cz">Českých
+							prioritách</a>,
+						nevládní
+						organizaci podporující informované rozhodování, ve které jsem zodpovědný za analýzu dat, mimo
+						jiné v
+						oblasti předlužení. Mám vystudovanou ekonomii na <a href="https://ies.fsv.cuni.cz/">IES Karlovy
+							Univerzity</a>, kde pokračuji na magistru v ekonomii veřejného sektoru spolu s <a
+							href="https://prg.ai/minor">Minorem v umělé inteligenci</a>. Mimo to jsem členem Finančního
+						výboru
+						Prahy 18. </p>
+
+					<p>Můj životopis je dostupný <a href='documents/cv.pdf'>zde</a> (pdf, anglicky), popř. můžete
+						nahlédnout na můj <a href="https://github.com/MatousFiala/">GitHub</a>.</p>
+
+					<p>Můžete mě kontaktovat na <a href="mailto:matousfiala@gmail.com">matousfiala@gmail.com</a>, nebo
+						skrze můj <a href="https://www.linkedin.com/in/matou%C5%A1-fiala-a154a21b0/">LinkedIn</a>.</p>
+				</div>
+			</div>
+
+			<div id='profile_pic'><img src='images/profile_picture.jpg' /></div>
+		</div>
+
+
+	</section>
+
+	<footer>
+		<div>
+			Font: <a href="https://github.com/iaolo/iA-Fonts"> iA Writer Quattro</a>
+		</div>
+	</footer>
+
+
+	<script src='lang-selector.js'></script>
+
+
 
 	<script src='polishes.js'></script>
 
-    </body>
+</body>

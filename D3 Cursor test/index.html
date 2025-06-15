@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analysis Report</h1>
+        
+        <section id="map-section">
+            <h2>Mapa kandidátů</h2>
+            <div class="controls">
+                <button class="granularity-btn active" data-granularity="kraje">Kraje</button>
+                <button class="granularity-btn" data-granularity="okresy">Okresy</button>
+                <button class="granularity-btn" data-granularity="orp">ORP</button>
+                <button class="granularity-btn" data-granularity="obce">Obce</button>
+            </div>
+            <div id="map"></div>
+        </section>
+
+        <section id="exekuce-section">
+            <h2>Exekuce podle exekutorů</h2>
+            <div class="controls">
+                <label for="min-exekuce">Minimální počet exekucí:</label>
+                <input type="range" id="min-exekuce">
+                <span id="min-exekuce-value"></span>
+            </div>
+            <div id="bar-chart"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
