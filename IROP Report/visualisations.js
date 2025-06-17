@@ -39,8 +39,8 @@ let updateIropPodporaVis = function() {
         console.log("a");
 
         Promise.all([
-            d3.csv("Data/oblasti.csv"),
-            d3.json("data/kraje.geojson")
+            d3.csv("https://matousfiala.cz/IROP%20Report/Data/oblasti.csv"),
+            d3.json("https://matousfiala.cz/IROP%20Report/Data/kraje.geojson")
         ]).then(function ([csvData, topoData]) {
             // Join data based on kraj and nuts3_kod
             let data = csvData.map(d => ({
