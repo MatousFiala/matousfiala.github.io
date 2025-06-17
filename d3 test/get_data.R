@@ -46,33 +46,37 @@ kraje %>%
 obce %>%
   left_join(
     paq_data %>%
-      select(KOD = 1, KANDIDATU = 9) %>% mutate(KOD = as.character(KOD)),
+      select(KOD = 1, KANDIDATU = 9) %>% mutate(KOD = as.character(KOD), KANDIDATU = as.double(KANDIDATU)),
     by = "KOD") %>%
   st_write("obce_paq.geojson", delete_dsn = T)
 
 orp %>%
   left_join(
     paq_data %>%
-      select(KOD = 3, KANDIDATU = 13) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = KOD, KANDIDATU = first(KANDIDATU, na.rm=T)),
-    by = "KOD") %>%
+      select(KOD = 3, NAZEV = 4, KANDIDATU = 13) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = NAZEV, KANDIDATU = first(KANDIDATU, na_rm=T)),
+    by = "NAZEV") %>%
   st_write("orp_paq.geojson", delete_dsn = T)
 
 okresy %>%
   left_join(
     paq_data %>%
-      select(KOD = 5, KANDIDATU = 12) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = KOD, KANDIDATU = first(KANDIDATU, na.rm=T)),
-    by = "KOD") %>%
+      select(KOD = 5, NAZEV = 6, KANDIDATU = 12) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = NAZEV, KANDIDATU = first(KANDIDATU, na_rm=T)),
+    by = "NAZEV") %>%
   st_write("okresy_paq.geojson", delete_dsn = T)
 
 kraje %>%
   left_join(
     paq_data %>%
-      select(KOD = 7, KANDIDATU = 11) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = KOD, KANDIDATU = first(KANDIDATU, na.rm=T)),
-    by = "KOD") %>%
+      select(KOD = 7, NAZEV = 8, KANDIDATU = 11) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = NAZEV, KANDIDATU = first(KANDIDATU, na_rm=T)),
+    by = "NAZEV") %>%
   st_write("kraje_paq.geojson", delete_dsn = T)
 
+paq_data %>%
+      select(KOD = 3, KANDIDATU = 13) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = KOD, KANDIDATU = first(KANDIDATU, na_rm=T))
 
 
 
 
 
+    paq_data %>%
+      select(KOD = 3, NAZEV = 4, KANDIDATU = 13) %>% mutate(KOD = as.character(KOD)) %>% summarise(.by = NAZEV, KANDIDATU = first(KANDIDATU, na_rm=T))

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: ia-quattro;
+    src: url(Fonts/iAWriterQuattroS-Regular.woff2);
+}
+
+@font-face {
+    font-family: ia-quattro;
+    src: url(Fonts/iAWriterQuattroS-Bold.woff2);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: ia-quattro;
+    src: url(Fonts/iAWriterQuattroS-Italic.woff2);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: ia-quattro;
+    src: url(Fonts/iAWriterQuattroS-BoldItalic.woff2);
+    font-weight: bold;
+    font-style: italic;
+}
+
+:root {
+    --bg: #333;
+    --col: #b0b0b0;
+    --font-family: "ia-quattro", "roboto", sans-serif;
+    --accent: #3a3a3a;
+    --hover: #444;
+    --active: #555;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--col);
+    font-family: var(--font-family);
+    text-align: justify;
+    line-height: 1.8;
+
+}
+
+header {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#centre-textbox {
+    display: flex;
+    align-items: center;
+
+}
+
+#content {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+.chart-selector {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+button, select {
+    background-color: var(--accent);
+    color: var(--col);
+    border: 1px solid var(--col);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    font-weight: bold;
+}
+
+button:hover, select:hover {
+    background-color: var(--hover);
+}
+
+button:active, select:active {
+    background-color: var(--active);
+}
+
+button.active {
+    background-color: var(--active);
+    border-color: var(--col);
+}
+
+select {
+    appearance: none;
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b0b0b0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+}
+
+.plot {
+    background-color: var(--accent);
+    border: 1px solid var(--col);
+    padding: 2em;
+    border-radius: 5px;
+}
+
+
+
+
