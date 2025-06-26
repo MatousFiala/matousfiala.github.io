@@ -27,11 +27,17 @@
                 <h3>Počty projektů podpořených IROP v krajích</h3>
                 <div class="chart-selector">
                     <div>
-                        Projektů:
-                        <button class="irop-podpora-data-selector active" value="total">Celkem</button>
-                        <button class="irop-podpora-data-selector" value="per-capita">Na 1000 obyvatel</button>
+                        <div>
+                            Projektů:
+                            <button class="irop-podpora-data-selector active" value="total">Celkem</button>
+                            <button class="irop-podpora-data-selector" value="per-capita">Na obyvatele</button>
+                        </div>
+                        <div>
+                            Zobrazit:
+                            <button class="irop-podpora-variable-selector active" value="n">Počet projektů</button>
+                            <button class="irop-podpora-variable-selector" value="total">Vyplacená částka</button>
+                        </div>
                     </div>
-                    |
                     <select name="oblast" id="irop-podpora-oblast-selector">
                         <option value="Vše">Všechny projekty</option>
                         <option value="Deinstitucionalizace">Deinstitucionalizace</option>
@@ -46,9 +52,16 @@
 
             <p>Mauris feugiat in elit quis efficitur. In hac habitasse platea dictumst. Sed nec urna lectus. Sed sed ex vitae nunc pretium ultrices. Fusce sit amet est rhoncus, tempor neque non, suscipit urna. Quisque tristique quam sit amet mattis pretium. Vivamus commodo ex nisl. Mauris aliquet lacinia eros, nec mollis risus ultricies vehicula. Pellentesque congue varius dui vitae fringilla. In in leo ut felis aliquam pellentesque. Morbi suscipit nunc id metus varius lacinia non eget est. Maecenas lobortis auctor tempus. Phasellus sit amet urna varius mi mattis ultrices eget id odio.</p>
         </article>
+        <article>
+            <div class="plot">
+                <h3>Počet slov v projevech poslanců ČR podle politické strany </h3>
+                <div id="strany-slova"></div>
+            </div>
+        </article>
     </section>
     </div>
 
     <script src="visualisations.js"></script>
+    <script src="strany_slova_viz.js"></script>
 </body>
 </html>
