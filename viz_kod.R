@@ -1,6 +1,19 @@
 library("tidyverse")
 load("https://matousfiala.cz/cp_edu_viz_data.RData")
+
+# Co se děje v těhle datech?
+points_clean
+
+# Pomůže nám statistika?
+mean(points_clean$x)
+mean(points_clean$y)
+cor(points_clean$x, points_clean$y)
+
+# a co vizualizace?
+ggplot(points_clean, aes(x = x, y = y)) + geom_point() + geom_path()
+
 # -- EDA vs communation -- #
+
 show(plot_eda)
 show(plot_communication)
 
@@ -116,8 +129,6 @@ exekuce_a_soc_vylouceni %>%
   facet_wrap(~kraj) +
   stat_smooth()
   
-
-
 
 
 
