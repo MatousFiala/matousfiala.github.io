@@ -1,5 +1,5 @@
 library("tidyverse")
-load("https://matousfiala.cz/cp_edu_viz_data.RData")
+load(url("https://matousfiala.cz/cp_edu_viz_data.RData"))
 
 # Co se děje v těhle datech?
 points_clean
