@@ -163,6 +163,7 @@ theme_mf <- function(grid = "y") {
   }
 }
 
+locale_cs_windows_encoding <- locale("cs", encoding = "ISO8859-1")
 
 
 
