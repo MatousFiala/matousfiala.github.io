@@ -38,7 +38,8 @@ ggplot(
 # geom_histogram definuje, že data zobrazujeme pomocí histogramu a vypočítá chlívky
 geom_histogram()
 
-exekuce %>%
+?geom_histogram
+
   ggplot(
     exekuce,
     aes(x = pocet_exekuci))  +
@@ -68,7 +69,7 @@ ggplot(
 byty_celkem_olm
 
 ggplot(
-  byty_celekm_olm,
+  byty_celkem_olm,
   # Čarový graf opět vyžaduje osu x a osu y
   aes(x = rok, y = pocet_dokoncenych_bytu)) +
 geom_line()
@@ -84,7 +85,12 @@ ggplot(byty_vsechny_typy_olm,
          # že chceme aby každý typ bytu měl svoji čáru
          colour = typ_bytu)
        ) +
-geom_line()
+geom_line() +
+  labs(
+    x = "Rok",
+    y = "Počet dokončených bytů",
+    colour = "Typ budovy"
+  )
 
 byty_vsechny_typy
 
@@ -96,11 +102,13 @@ ggplot(byty_vsechny_typy,
            colour = typ_bytu)
        ) + 
 geom_line() +
-# facet_wrap definuje rozdělení grafů podle sloupce mesto (podle = ~)
-facet_wrap(~mesto)
+#facet_wrap definuje rozdělení grafů podle sloupce mesto (podle = ~)
+facet_wrap(~mesto) 
 
 # Bodový graf
 # -----------
+
+exekuce_a_soc_vylouceni
 
 exekuce_a_soc_vylouceni %>%
   # Bodový graf opět vyžaduje mapping pro osu x a osu y
@@ -115,7 +123,7 @@ exekuce_a_soc_vylouceni %>%
   # argument postition = "jitter" body trochu "zaštěrchá" aby neležely na sobě. 
   # argument alpha značí průhlednost (0 = průhledný, 1 = solidní) snížením uvidíme,
   # když se dva doby překrávají
-  geom_point(position = "jitter", alpha = 0.5)
+  geom_point(position = "jitter", alpha = 0.25)
 
 exekuce_a_soc_vylouceni %>%
   ggplot(aes(x = socialni_vylouceni, y = procento_v_exekuci)) +
@@ -128,6 +136,8 @@ exekuce_a_soc_vylouceni %>%
   geom_point(position = "jitter") +
   facet_wrap(~kraj) +
   stat_smooth()
+
+exekuce_a_soc_vylouceni %>% arrange(desc(procento_v_exekuci))
   
 
 
