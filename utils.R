@@ -165,6 +165,20 @@ theme_mf <- function(grid = "y") {
 
 locale_cs_windows_encoding <- locale("cs", encoding = "ISO8859-1")
 
+get_rze_connection <- function() {
+  library(DBI)
+  library(RPostgres)
+  
+  dbConnect(
+    Postgres(),
+    dbname = "postgres",
+    host = "localhost",
+    port = 5432,
+    user = "postgres",
+    password = "postgres"
+  )
+}
+
 
 
 
