@@ -16,7 +16,7 @@ let changeLanguage = function(language) {
 const langChoice = document.getElementById('lang-choice');
 const buttons = langChoice.querySelectorAll('button');
 
-let language = 'CZ
+let language = 'CZ'
 
 changeLanguage(language)
 
