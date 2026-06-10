@@ -2,11 +2,9 @@
 
 let changeLanguage = function(language) {
 
-
     const otherLang = language === "EN" ? "CZ" : "EN";
     document.querySelectorAll(`.${otherLang}`).forEach(el => {
 	el.classList.add("not-displayed")
-	console.log("EN")
     });
 
 
@@ -18,7 +16,7 @@ let changeLanguage = function(language) {
 const langChoice = document.getElementById('lang-choice');
 const buttons = langChoice.querySelectorAll('button');
 
-let language = 'EN';
+let language = 'CZ
 
 changeLanguage(language)
 
