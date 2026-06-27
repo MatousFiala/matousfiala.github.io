@@ -1,34 +1,25 @@
 @font-face {
-	font-family: ia-quattro;
-	src: url(Fonts/iAWriterQuattroS-Regular.woff2);
-}
-
-@font-face {
-	font-family: ia-quattro;
-	src: url(Fonts/iAWriterQuattroS-Bold.woff2);
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: ia-quattro;
-	src: url(Fonts/iAWriterQuattroS-Italic.woff2);
-	font-style: italic;
-}
-
-@font-face {
-	font-family: ia-quattro;
-	src: url(Fonts/iAWriterQuattroS-BoldItalic.woff2);
-	font-weight: bold;
-	font-style: italic;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/robotomono/v31/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vq_SeW4Ep0.woff2) format('woff2');
+    unicode-range: U +0460 -052F, U +1C80 -1C8A, U +20B4, U +2DE0 -2DFF, U + A640-A69F, U + FE2E-FE2F;
 }
 
 body {
-	--bg: #0f0d0c;
-	--text_col: #b0b0b0;
+	--bg: #fff;
+	--text_col: #4b4b4b;
+	--text_col_darker: #1a1a1a;
+	--text_col_lighter: #5c5c5c;
+    --link_col: #e2c9f6;
+	font-weight: bold;
+;
 
-	font-family: 'ia-quattro', sans-serif;
-	font-size: 12pt;
-	line-height: 1.8;
+	font-family: 'Roboto Mono', 'Roboto', 'Helvetica', sans-serif;
+	font-size: 15px;
+    font-weight: 400;
+	line-height: 28px;
 	display: block;
 
 
@@ -37,16 +28,6 @@ body {
 }
 
 
-header {
-	width: 100%;
-	margin: 5% 0 0 0;
-	display: flex;
-}
-
-header h1 {
-	align-self: center;
-	margin: auto;
-}
 
 #lang-choice {
 	margin: auto;
@@ -57,11 +38,11 @@ header h1 {
 #lang-choice button {
 	background-color: transparent;
 	border: none;
-	color: var(--text_col);
+	color: var(--text_col_lighter);
 }
 
 #lang-choice button.active {
-	color: #d0d0d0;
+	color: var(--text_col_darker);
 }
 
 #lang-choice button:first-child {
@@ -71,7 +52,7 @@ header h1 {
 #content {
 	max-width: 80ch;
 	padding: 1ch 10ch;
-	margin: 0 auto;
+	margin: 5em auto;
 }
 
 #flex {
@@ -90,10 +71,6 @@ header h1 {
 		margin: auto;
 	}
 
-	body {
-		font-size: 11pt;
-	}
-
 	#content {
 		padding: 1ch 3ch;
 	}
@@ -103,9 +80,6 @@ p {
 	text-align: justify;
 }
 
-a {
-	color: var(--text_col);
-}
 
 #flex .text p:first-of-type {
 	margin-top: 0;
@@ -131,11 +105,11 @@ a {
 }
 
 a {
-	background-color: #222;
-	padding: 3px 5px;
+    color: var(--text_col);
+	background-color: var(--link_col);
+	padding: 0px 5px;
 	border-radius: 2px;
 	text-decoration: None;
-	font-weight: bold;
 }
 
 footer {
@@ -166,3 +140,4 @@ ul.links li {
 	display: inline;
 	list-style-type: none;
 }
+
